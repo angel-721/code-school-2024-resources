@@ -1,1 +1,5 @@
-# code-school-2024-resources
+# Code School 2024 Resources
+
+### [Frontend Resources](./frontend/resources.md)
+
+### [Backend Resources](./backend/resources.md)

@@ -12,8 +12,8 @@ Ajax(Asynchronous JavaScript and XML) - [MDN Web Docs Ajax](https://developer.mo
 
 ## HTTP - hypertext transfer protocol
 HTTP - [CloudFlare What is HTTP?](https://www.cloudflare.com/learning/ddos/glossary/hypertext-transfer-protocol-http/)
-  - Request - 
-  - Response - 
+  - Request - [W3 SchoolsHTTP Methods](https://www.w3schools.com/tags/ref_httpmethods.asp) 
+  - Response - [Oracle HTTP Response](https://docs.oracle.com/en/cloud/saas/warehouse-management/21b/owmre/http-response.html)
     - Status Codes - [MDN Web Docs HTTP response status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
 
 CORS(Cross-Origin Resource Sharing)
@@ -25,6 +25,20 @@ Client-Server Model - [RedSwitches Client Server Architecture](https://www.redsw
 
 REST - [Red Hat What is a REST API?](https://www.redhat.com/en/topics/api/what-is-a-rest-api)
 
+## CHROME developer Tools
+
+How to open/keyboard shortcuts - ctrl+shift+i
+
+## Miscellaneous
+
+### Git & GitHub
+Git Simplified - [git - the simple guide](https://rogerdudler.github.io/git-guide/)
+
+Git Cheat Sheet - [freeCodeCamp](https://www.freecodecamp.org/news/git-cheat-sheet/)
+
+GitHub Desktop - [Windows & Linux](https://www.simplilearn.com/how-to-use-github-desktop-tutorial-article)
+
+GitHub Desktop - [MacOS](https://www.youtube.com/watch?v=FYmnyi5eJ8E)
 
 
 ## [Check Out Frontend Resources](https://github.com/angel-721/code-school-2024-resources/blob/main/frontend/README.md)

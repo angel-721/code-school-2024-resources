@@ -1,5 +1,8 @@
 # Backend Outline & Resources
 
+## Every web app is a web page but not every web page is a web app
+[Web Applications vs. Static Websites – What’s the Difference?
+](https://www.everystep-automation.com/web-applications-vs-static-websites-whats-difference/)
 ## JavaScript
 What is the DOM?(Document Object Model) - [W3 Schools JavaScript HMTL DOM](https://www.w3schools.com/js/js_htmldom.asp)
 

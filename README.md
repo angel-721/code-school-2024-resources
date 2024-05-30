@@ -1,5 +1,5 @@
 # Code School 2024 Resources
 
-### [Frontend Resources](./frontend/resources.md)
+### [Frontend Resources](./frontend/README.md)
 
-### [Backend Resources](./backend/resources.md)
+### [Backend Resources](./backend/README.md)

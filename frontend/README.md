@@ -157,3 +157,5 @@ Git Cheat Sheet - [freeCodeCamp](https://www.freecodecamp.org/news/git-cheat-she
 GitHub Desktop - [Windows & Linux](https://www.simplilearn.com/how-to-use-github-desktop-tutorial-article)
 
 GitHub Desktop - [MacOS](https://www.youtube.com/watch?v=FYmnyi5eJ8E)
+
+### [Check Out Backend Resources](https://github.com/angel-721/code-school-2024-resources/blob/main/backend/README.md#check-out-frontend-resources)

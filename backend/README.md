@@ -22,3 +22,5 @@ REST - [Red Hat What is a REST API?](https://www.redhat.com/en/topics/api/what-i
 CORS(Cross-Origin Resource Sharing)
   - [Fireship: CORS in 100 Seconds](https://www.youtube.com/watch?v=4KHiSt0oLJ0)
   - [MDN Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
+
+### [Check Out Frontend Resources](https://github.com/angel-721/code-school-2024-resources/blob/main/frontend/README.md)

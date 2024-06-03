@@ -112,7 +112,7 @@ if (1 > 2) {
 
 ```python
 true_and_false = True and False
-true_or_false = True and False
+true_or_false = True or False
 ```
 </td>
 <td>

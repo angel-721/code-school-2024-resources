@@ -122,3 +122,121 @@ let true_or_false = true || false;
 </td>
 </table>
 
+
+### If-else logic
+<table>
+<tr>
+<th>Python</th>
+<th>JavaScript</th>
+</tr>
+<tr>
+<td>
+
+```python
+# if else
+num = "1"
+if 1 == num:
+  print("Num is equal to 1")
+else: 
+  print("Num is not equal to 1")e
+```
+</td>
+<td>
+
+```JavaScript
+let num = "1";
+if (1 == num) {
+  console.log("Num is equal to 1");
+} else {
+  console.log("Num is not equal to 1");
+}
+```
+<small> What does the above code print?</small>
+</td>
+</table>
+
+### Functions
+<table>
+<tr>
+<th>Python</th>
+<th>JavaScript</th>
+</tr>
+<tr>
+<td>
+
+```python
+def addTwoNumbers(x,y):
+    return x + y
+```
+</td>
+<td>
+
+```JavaScript
+function addTwoNumbers(x, y) {
+  return x + y;
+}
+```
+<small> we will use another way to declare functions in JavaScript</small>
+</td>
+</table>
+
+### JSON - JavaScript Object Notation
+<table>
+<tr>
+<th>Python</th>
+<th>JavaScript</th>
+</tr>
+<tr>
+<td>
+
+```python
+# dictionaries
+student = {
+    "name": "Angel",
+    "age": 21
+}
+
+print(student["name"])
+```
+</td>
+<td>
+
+```JavaScript
+let student = {
+  name: "Angel",
+  age: 21,
+};
+
+console.log(student.name);
+```
+</td>
+</table>
+
+
+### JavaScript Arrow Functions
+<table>
+<tr>
+<th>Function Key Word</th>
+<th>Arrow Function</th>
+</tr>
+<tr>
+<td>
+
+```JavaScript
+function addTwoNumbers(x, y) {
+  return x + y;
+}
+```
+❌ 🤮
+</td>
+<td>
+
+```JavaScript
+let addTwoNumbers = (x, y) => {
+  return x + y;
+};
+```
+✔️ 😄
+</td>
+</table>
+

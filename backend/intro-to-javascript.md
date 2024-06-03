@@ -11,6 +11,7 @@
 ```python
 # print Hello World
 print("Hello World")
+nums = [1,2,3]
 ```
 </td>
 <td>
@@ -18,6 +19,7 @@ print("Hello World")
 ```JavaScript
 // declare a variable in JavaScript using the let keyword
 let name = "Angel";
+let nums = [1,2,3];
 ```
 </td>
 </table>

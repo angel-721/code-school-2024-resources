@@ -1,3 +1,5 @@
+# JavaScript for those who know Python
+
 ### Declare a Variable
 <table>
 <tr>

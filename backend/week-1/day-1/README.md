@@ -10,8 +10,7 @@
 <td>
 
 ```python
-# print Hello World
-print("Hello World")
+name = "Angel"
 nums = [1,2,3]
 ```
 </td>

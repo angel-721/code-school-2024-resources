@@ -1,0 +1,38 @@
+<!doctype html>
+
+<html data-theme="dark">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>ToDo List</title>
+  </head>
+
+  <body class="container">
+    <h1>ToDo List</h1>
+
+    <div class="grid">
+      <div id="input-div">
+        <input id="task-name-input" placeholder="task name" />
+        <small>Task Name</small>
+        <input
+          id="task-importance-input"
+          placeholder="task importance"
+          type="number"
+        />
+        <small>Task Importance</small>
+        <button id="submit-task-button">Submit Task</button>
+        <button id="clear-list-button">Clear Tasks</button>
+      </div>
+      <div id="tasks-div">
+        <h3 style="text-align: center">Things I need to do today...</h3>
+
+        <ul id="things-to-do"></ul>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

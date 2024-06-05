@@ -1,0 +1,49 @@
+body {
+  margin-top: 2rem;
+}
+
+.centered-div {
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+#input-div input {
+  width: 10rem;
+}
+#input-div textarea {
+  width: 15rem;
+  height: 10rem;
+}
+
+#submit-task-button {
+  background-color: #90ee90;
+  color: black;
+}
+
+.not-done {
+  color: #ed684e;
+}
+
+.done {
+  color: #90ee90;
+  text-decoration: line-through;
+}
+
+#things-to-do {
+  background-color: #554a1b;
+  border-radius: 13px;
+  padding: 5rem;
+}
+
+#things-to-do li {
+  list-style: circle;
+  cursor: pointer;
+}
+
+#clear-list-button {
+  background-color: red;
+}

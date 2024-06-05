@@ -1,0 +1,13 @@
+body {
+  margin-top: 3rem;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+#answer {
+  text-align: center;
+  width: 300px;
+}

@@ -1,0 +1,31 @@
+html,
+body {
+  background-color: #baa1cc;
+}
+
+body {
+  margin-top: 3.2rem;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+#inputs {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+button {
+  color: greenyellow;
+  background-color: black;
+}
+
+#bad-movies-list {
+  margin-top: 3rem;
+  border-radius: 12px;
+  padding: 3rem;
+  background-color: blanchedalmond;
+  color: green;
+}

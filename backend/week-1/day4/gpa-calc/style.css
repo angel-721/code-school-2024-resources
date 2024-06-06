@@ -1,0 +1,25 @@
+.good-gpa {
+  color: green;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.gpa-input {
+  width: 2px;
+}
+
+#gpa {
+  text-align: center;
+}
+
+body {
+  margin-top: 2.7rem;
+}
+
+h1 {
+  margin-bottom: 3rem;
+}

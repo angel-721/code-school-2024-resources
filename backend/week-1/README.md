@@ -22,3 +22,5 @@
   - [Wordle](https://github.com/angel-721/code-school-2024-resources/tree/main/backend/week-1/day3/worlde)
   - [git-names](https://github.com/angel-721/git-names)
   - [Git (half) good at Git](https://github.com/angel-721/git-names/blob/main/README.md)
+  - [Partner-Project
+](https://github.com/angel-721/code-school-2024-resources/tree/main/backend/week-1/day5)

@@ -18,7 +18,7 @@
   - [gpa-calc](https://github.com/angel-721/code-school-2024-resources/tree/main/backend/week-1/day4/gpa-calc)
   - [Wordle](https://github.com/angel-721/code-school-2024-resources/tree/main/backend/week-1/day3/worlde)
 
-## [day 5 - Intro- to JavaScript con. & Git ](https://github.com/angel-721/code-school-2024-resources/tree/main/backend/week-1/day4)
+## [day 5 - Intro- to JavaScript con. & Git ](https://github.com/angel-721/code-school-2024-resources/tree/main/backend/week-1/day5)
   - [Wordle](https://github.com/angel-721/code-school-2024-resources/tree/main/backend/week-1/day3/worlde)
   - [git-names](https://github.com/angel-721/git-names)
-  - [Git (half) good at Git](https://github.com/angel-721/code-school-2024-resources/tree/main/backend/week-1/day5)
+  - [Git (half) good at Git](https://github.com/angel-721/git-names/blob/main/README.md)

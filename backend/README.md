@@ -43,5 +43,7 @@ GitHub Desktop - [Windows & Linux](https://www.simplilearn.com/how-to-use-github
 
 GitHub Desktop - [MacOS](https://www.youtube.com/watch?v=FYmnyi5eJ8E)
 
+Git Workflow: - [A successful Git branching model](https://nvie.com/posts/a-successful-git-branching-model/)
+
 
 ## [Check Out Frontend Resources](https://github.com/angel-721/code-school-2024-resources/blob/main/frontend/README.md)

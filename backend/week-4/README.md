@@ -1,6 +1,7 @@
 # Week 4
 
 ### Setting up Node:
+*Note: You don't need to follow this if you are using a classroom Mac, the classroom Mac's already have Node installed.
 
 ## For Mac Devices:
 Step 1) Download [Homebrew](https://brew.sh/) with this command 

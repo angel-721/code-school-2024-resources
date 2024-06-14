@@ -4,7 +4,7 @@
 
 Use a free api to create a single page web app using Vue.js Options API(The way you just learned how to use Vue this past week)
 
-[This](https://www.youtube.com/watch?v=kfVsfOSbJY0) is a nice GitHub Repo for finding free api's. It will save you time if you choose one that has no authentication.
+[This](https://github.com/public-apis/public-apis) is a nice GitHub Repo for finding free api's. It will save you time if you choose one that has no authentication.
 
 ### Some interesting API's
 - [PokeAPI](https://pokeapi.co/)

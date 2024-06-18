@@ -33,6 +33,28 @@ category=Gambling%20Debt&description=I%20owe%20the%20mafia%20after%20putting%201
 
 Response - the response to the request:
 ```HTTP
+HTTP/version Status-Code Reason-Phrase
+Headers
+   (e.g., Content-Type, Content-Length, etc.)
+
+Body:
+Data returned by the server, such as JSON, HTML, images, etc.
+```
+
+HTTP Status-Code's are the primary form of communication between the client and server. Some common codes are:
+  - 200 OK
+  - 201 Created
+  - 403 Forbidden
+  - 404 Not Found
+Ranges of HTTP Status codes:
+  - 100-199:  informational status codes
+  - 200-299:  Request is good(successful responses)
+  - 300-399:  Redirection
+  - 400-499:  Request is not good(Client Error)
+  - 500-599:  I(The server) messed up. Probably means you have a bug in your server code.
+  - View more about HTTP Status codes [here](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)!
+
+```HTTP
 HTTP/1.1 201 Created
 Location: https://expenses.codeschool.cloud/expenses/1
 Content-Type: application/json

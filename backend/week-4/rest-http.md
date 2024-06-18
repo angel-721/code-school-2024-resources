@@ -68,3 +68,27 @@ Access-Control-Allow-Origin: *
 }
 ```
 
+
+## REST 
+Representational State Transfer - web architectural style
+
+We are going to follow RESTful API standards. Read more about them [here](https://restfulapi.net/resource-naming/).
+
+ We will represent our data as a collection of a resource. Such as ```expenses```. We won't use expense since there could be multiple expenses.
+
+
+```JavaScript
+// This will give the entire collection of the expense resource
+fetch("some-api-link/expenses");
+```
+
+
+What if we want a single expense?
+We should get that ID by it's ID 
+```JavaScript
+// get expense that has the id 7
+fetch("some-api-link/expenses/7");
+```
+
+You should keep RESTful endpoints as nouns. 
+Trick question: What should I call the RESTful endpoint to a server endpoint that just predict's on data from a POST? This is not a resource you can retrieve.

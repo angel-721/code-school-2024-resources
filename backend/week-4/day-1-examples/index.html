@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vue.js</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- everything vue inside here -->
+
+      <ul>
+        <li v-for="song in legal_songs">{{song}}</li>
+      </ul>
+
+      <!-- The buck stops here -->
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

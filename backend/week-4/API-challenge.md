@@ -5,13 +5,13 @@ Make a GitHub repo: for your API(e.g cat-names-api)
 
 Your resource must have three fields
 - Must have one string type
-- Must have one int type
+- Must have one number type
 - Can not be expense or student
 - You must use a .env file to hold your MongoDB connection
 - DO NOT INCLUDE the .env in your repo
 
 Step 1.2)
-Make a Model.js to hold the model of your data. Define a Schema the same way we have done before
+Make a model.js to hold the model of your data. Define a Schema the same way we have done before and export it to your index.js
 
 Step 2)
 Make a API with of one or more resources

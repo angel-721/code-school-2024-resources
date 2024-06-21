@@ -20,9 +20,26 @@ Make a API with of one or more resources
   - GET a single record
   - POST
   - DELETE
+
 GET the data from a MongoDB instance and save it to MongoDB
 
 Ensure sure that you have data validation with try-catch blocks for each endpoint
 
 Step 3 - Friday:
 Swap your API with someone and make a Vue frontend for the other person's API
+
+Also, it would be nice in your Github README.md you can look at the code of this file and copy and paste this table for an example of documentation of your endpoint.
+
+Bellow is a example of a past project I made.
+
+
+## REST Endpoints
+Name                           | Method | Path
+-------------------------------|--------|------------------
+Retrieve savedfights collection| GET   | /savedfights
+Create savedfights member| POST   | /savedfights
+Delete savedfights member| DELETE  | /savedfights<id>
+Update savedfights collection| PATCH  | /savedfights
+Create prediction| POST  | /predictions
+Create fight| POST  | /fights
+Retrieve savedfights collection as csv| GET  | /datasets

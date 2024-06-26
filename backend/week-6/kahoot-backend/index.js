@@ -23,6 +23,11 @@ app.use(
     secret: "jhgfoweriwoerodfkvxcvmxvxm12340fsdfkl32f0y0reofasf",
     saveUninitialized: true,
     resave: false,
+    cookie: {
+      sameSite: "none",
+      httpOnly: true,
+      maxAge: 24 * 60 * 60 * 1000, // 24 hours
+    },
   }),
 );
 
@@ -41,29 +46,29 @@ async function AuthMiddleware(req, res, next) {
   }
 }
 
-app.get("/users", async function (req, res) {
+app.post("/session", async function (req, res) {
   try {
-    let users = await model.User.find({}, { password: 0 });
-    res.send(users);
-  } catch (error) {
-    res.status(404).send("Users not found.");
-  }
-});
-
-app.get("/users/:userID", async function (req, res) {
-  try {
-    let user = await model.User.findOne(
-      { _id: req.params.userID },
-      { password: 0 },
-    );
+    let user = await model.User.findOne({ email: req.body.email });
     if (!user) {
-      res.status(404).send("User not found.");
+      res.status(401).send("Authentication failure.");
       return;
     }
-    res.send(user);
+    console.log(user);
+    let isGoodPassword = await user.verifyPassword(req.body.password);
+    if (!isGoodPassword) {
+      res.status(401).send("Authentication failure.");
+      return;
+    }
+    req.session.userID = user._id;
+    req.session.name = user.name;
+    res.status(201).send(req.session);
   } catch (error) {
-    res.status(404).send("User not found");
+    console.log(error);
+    res.status(400).send("Not found. (Bad email format?)");
   }
+});
+app.get("/session", AuthMiddleware, async function (req, res) {
+  res.send(req.session);
 });
 
 app.post("/users", async function (req, res) {
@@ -89,6 +94,31 @@ app.post("/users", async function (req, res) {
   } catch (error) {
     console.log(error);
     res.status(422).send(error);
+  }
+});
+
+app.get("/users", async function (req, res) {
+  try {
+    let users = await model.User.find({}, { password: 0 });
+    res.send(users);
+  } catch (error) {
+    res.status(404).send("Users not found.");
+  }
+});
+
+app.get("/users/:userID", async function (req, res) {
+  try {
+    let user = await model.User.findOne(
+      { _id: req.params.userID },
+      { password: 0 },
+    );
+    if (!user) {
+      res.status(404).send("User not found.");
+      return;
+    }
+    res.send(user);
+  } catch (error) {
+    res.status(404).send("User not found");
   }
 });
 
@@ -136,36 +166,10 @@ app.delete("/users/:userID", AuthMiddleware, async function (req, res) {
   }
 });
 
-app.get("/session", AuthMiddleware, async function (req, res) {
-  res.send(req.session);
-});
-
 app.delete("/session", function (req, res) {
   req.session.userID = undefined;
   req.session.name = undefined;
   res.status(204).send();
-});
-
-app.post("/session", async function (req, res) {
-  try {
-    let user = await model.User.findOne({ email: req.body.email });
-    if (!user) {
-      res.status(401).send("Authentication failure.");
-      return;
-    }
-    console.log(user);
-    let isGoodPassword = await user.verifyPassword(req.body.password);
-    if (!isGoodPassword) {
-      res.status(401).send("Authentication failure.");
-      return;
-    }
-    req.session.userID = user._id;
-    req.session.name = user.name;
-    res.status(201).send(req.session);
-  } catch (error) {
-    console.log(error);
-    res.status(400).send("Not found. (Bad email format?)");
-  }
 });
 
 // GET
@@ -233,15 +237,19 @@ app.post("/quizzes", AuthMiddleware, async function (req, res) {
 
 app.put("/quizzes/:quizID", AuthMiddleware, async function (req, res) {
   try {
-    let quiz = await model.Quiz.findOne({ _id: req.params.quizID }).populate(
-      "User",
-    );
+    let quiz = await model.Quiz.findOne({
+      _id: req.params.quizID,
+      owner: req.user._id,
+    }).populate("owner");
+
     if (!quiz) {
       res.status(404).send("Quiz not found");
       return;
     }
 
-    if (req.user._id !== quiz.owner) {
+    console.log(req.user._id);
+    console.log(quiz.owner._id);
+    if (req.user._id.toString() !== quiz.owner._id.toString()) {
       res.status(403).send("Not Authenticated");
       return;
     }
@@ -269,11 +277,8 @@ app.delete("/quizzes/:quizID", AuthMiddleware, async function (req, res) {
   try {
     let isDeleted = await model.Quiz.findOneAndDelete({
       _id: req.params.quizID,
+      owner: req.user._id,
     });
-    if (req.user._id !== quiz.owner) {
-      res.status(403).send("Not Authenticated");
-      return;
-    }
     if (!isDeleted) {
       res.status(404).send("Quiz Not Found");
       return;

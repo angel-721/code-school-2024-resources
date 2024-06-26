@@ -23,11 +23,6 @@ app.use(
     secret: "jhgfoweriwoerodfkvxcvmxvxm12340fsdfkl32f0y0reofasf",
     saveUninitialized: true,
     resave: false,
-    cookie: {
-      sameSite: "none",
-      httpOnly: true,
-      maxAge: 24 * 60 * 60 * 1000, // 24 hours
-    },
   }),
 );
 

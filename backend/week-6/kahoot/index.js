@@ -80,6 +80,30 @@ app.post("/session", async (request, response) => {
   }
 });
 
+app.post("/quizzes", async function (req, res) {
+  try {
+    const newQuiz = new model.Quiz({
+      title: req.body.title,
+      description: req.body.description,
+      questions: req.body.questions,
+      owner: req.session.userID,
+    });
+
+    const error = await newQuiz.validateSync();
+    if (error) {
+      res.status(422).send(error);
+      console.log(error);
+      return;
+    }
+
+    await newQuiz.save();
+    res.status(201).send("Created quiz.");
+  } catch (error) {
+    console.error(error);
+    res.status(422).send(error);
+  }
+});
+
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}...`);
 });

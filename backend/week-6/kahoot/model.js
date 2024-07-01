@@ -30,8 +30,44 @@ UserSchema.methods.verifyPassword = async function (plainPassword) {
   return isOkay;
 };
 
+const QuizSchema = Schema({
+  title: {
+    type: String,
+    required: [true, "Quiz must have a title."],
+  },
+  owner: {
+    type: Schema.Types.ObjectId,
+    ref: "User",
+    required: [true, "A quiz needs a person"],
+  },
+  description: String,
+  questions: [
+    {
+      questionText: {
+        type: String,
+        required: [true, "Question cannot be blank."],
+      },
+      possibleChoices: [
+        {
+          answerText: {
+            type: String,
+            required: [true, "Possible answer choice cannot be blank."],
+          },
+          isCorrect: {
+            type: Boolean,
+            required: [true, "An answer must be correct or not (true/false)."],
+          },
+        },
+      ],
+    },
+  ],
+});
+
 const User = mongoose.model("User", UserSchema);
+const Quiz = mongoose.model("Quiz", QuizSchema);
 
 module.exports = {
   User: User,
+  Quiz: Quiz,
 };
+

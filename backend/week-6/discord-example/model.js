@@ -4,6 +4,7 @@ const { Schema } = mongoose;
 
 mongoose.connect(process.env.DATABASE);
 
+// This is the Mongoose Schema
 const UserSchema = Schema({
   email: {
     type: String,
@@ -48,6 +49,7 @@ UserSchema.methods.verifyPassword = async function (password) {
   return isGood;
 };
 
+// This is the mongoose model
 const User = mongoose.model("User", UserSchema);
 const Server = mongoose.model("Server", ServerSchema);
 

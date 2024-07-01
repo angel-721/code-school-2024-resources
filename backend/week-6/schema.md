@@ -20,7 +20,46 @@
 }
 ```
 
+Here is GET and GET/id for quizzes
+```JavaScript
+app.get("/quizzes", async function (req, res) {
+  try {
+    let quizzes = await model.Quiz.find();
+    if (!quizzes) {
+      res.status(404).send("Quizzes Not Found");
+      return;
+    }
+    res.json(quizzes);
+  } catch (error) {
+    console.log(error);
+    res.status(404).send("Quizzes Not Found");
+  }
+});
+
+app.get("/quizzes/:quizID", async function (req, res) {
+  try {
+    console.log(req.params.quizID);
+    let quiz = await model.Quiz.find({ _id: req.params.quizID });
+    console.log(quiz);
+    if (!quiz) {
+      console.log("Quiz not found.");
+      res.status(404).send("Quiz not found.");
+      return;
+    }
+
+    res.json(quiz);
+  } catch (error) {
+    console.log(error);
+    console.log("Bad request (GET quiz).");
+    res.status(400).send("Quiz not found.");
+  }
+});
+```
+
+
 Create a Mongoose schema structured like this HTTP JSON request body.
+
+Name the schema ```QuizSchema```, name the model ```Quiz```, and the endpoint ```quizzes```
 
 Hints:
  - title,owner,description, questions

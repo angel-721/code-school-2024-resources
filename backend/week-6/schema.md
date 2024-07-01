@@ -66,3 +66,25 @@ Hints:
  - Assume title, and owner are required
  - For owner think about populate, look at the Discord server example about how server's had members but isntead of an array, just have a single owner
  - questions is not required but the questionText is and in questions[i].possibleChoices the answerText and isCorrect are requried.
+ - questions is an array and questions[i].possibleChoices is a array inside questions. Look at the pets example to see how you set up list that also declares a schema.
+
+HINT: Here is a example code for nested schemas. 
+```JavaScript
+const UserSchema = Schema({
+  email: {
+    type: String,
+    required: [true, "User must have an email."],
+  },
+  name: String,
+  password: {
+    type: String,
+    required: [true, "User must have a password."],
+  },
+  pets: [
+    {
+      pet_name: { type: String, required: [true, "Pet must exist"] },
+      foods: [{ type: String }],
+    },
+  ],
+});
+```

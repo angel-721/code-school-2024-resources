@@ -88,3 +88,13 @@ const UserSchema = Schema({
   ],
 });
 ```
+
+HINT - when making a new quiz from the model, get the userID from the cookie to save it.
+
+This means you should post to /session first to get your cookie before posting to quizzes
+```JavaScript
+// post to session to log in before making a Quiz
+newquiz = model.Quiz.new({
+	owner: request.session.userID
+})
+```

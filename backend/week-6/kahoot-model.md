@@ -1,10 +1,10 @@
 Step 1)
 
-```
+```JavaScript
 {
     "email":"a@a.com",
     "password": "123"
-    "name": angel
+    "name": "angel"
 }
 ```
 For the HTTP request above, create a mongoose schema. The schema name should be ``UserSchema`` and model name should be ```User```
@@ -24,7 +24,7 @@ Step 3)
 
 Create a simple POST endpoint for /users. This GET might be neat when it comes to debugging your GET
 
-```
+```JavaScript
 app.get("/users", async function (req, res) {
   try {
     let users = await model.User.find();
@@ -33,4 +33,4 @@ app.get("/users", async function (req, res) {
     res.status(404).send("Users not found.");
   }
 });
-```JavaScript
+```

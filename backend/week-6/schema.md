@@ -1,4 +1,4 @@
-```
+```JavaScript
 {
     "title": "test quiz2",
     "description": "this is a test quiz with questions",

@@ -1,4 +1,6 @@
-### Step 1 Create a new model.js for these objects: ```Artist```, ```Song```, ```Playlist```
+## Step 1)
+
+Create a new model.js for these objects: ```Artist```, ```Song```, ```Playlist```
 
 Artist Raw JSON - Keep the model simple, it only needs a string name that should be required:
 ```JavaScript
@@ -32,7 +34,12 @@ Playlist Raw JSON - Notice that songs is a list of object id's. Think back to me
 }
 ```
 
-### Step 2) Create a new index.js that has a GET and POST endpoint for ```/songs``` ```/artists``` ```and ```/playlists```. Your server MUST have server side validation. Each endpoint should be able to accept the raw json examples(BE AWARE I give fake ID's. When testing, use real ids)
+# Step 2) 
+
+Create a new index.js that has a GET and POST endpoint for ```/songs```, ```/artists```, and ```/playlists```. 
+
+Your server MUST have server side validation. Each endpoint should be able to accept the raw json examples(BE AWARE I give fake ID's. When testing, use real ids)
+
 Hints:
-  - songs and playlists will have to call a function after you call find()
+  - GET for ```/songs``` and ```/playlists``` will have to call a function after you call find()
   - Look for the model that doesn't have any nest objects. You will probably want to set up that endpoint first

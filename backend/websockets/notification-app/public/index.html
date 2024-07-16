@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Web socket test</title>
+  </head>
+  <body>
+    <div id="app" v-cloak class="container">
+      <button @click="postClick()">Post to clicks</button>
+      <p>Your click count is {{clicks}}</p>
+      <p>The max click count across all users is {{maxClicks}}</p>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+#top-bar {
+  background-color: rgb(0, 0, 48);
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  height: 100px;
+  padding: 2rem;
+}
+
+#search-bar {
+  display: flex;
+  /* gap: 1rem; */
+  align-items: center;
+}
+
+input {
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 5px 0px 0px 5px;
+  border: none;
+}
+
+#clear-search {
+  font-size: 1rem;
+  padding: 0.5rem;
+  color: white;
+  background-color: red;
+  border-radius: 0px 5px 5px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+#expenses {
+  width: 90%;
+  margin: 0px auto;
+  text-align: left;
+}
+
+#expenses > div:nth-child(even) {
+  background-color: rgba(129, 129, 129, 0.25);
+}
+
+.row-head,
+.row-body,
+.row-footer {
+  background-color: rgba(255, 255, 255, 0.2);
+  height: 60px;
+  display: grid;
+  grid-template-columns: 4fr 2fr 3fr 1fr 1fr;
+  align-items: center;
+  padding: 12px 24px;
+  margin: 6px 0;
+}
+
+.row-head {
+  background-color: transparent;
+}
+.row-footer {
+  font-weight: bold;
+}
+
+.button-container {
+  display: flex;
+  gap: 1rem;
+}
+
+button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(0, 0, 44);
+  color: white;
+  cursor: pointer;
+}
+
+.modal {
+  background-color: rgba(255, 255, 255, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.modal-input {
+  border-radius: 5px;
+  background-color: rgb(202, 202, 202);
+}
+
+.modal .content {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+#close {
+  position: fixed;
+  top: 50px;
+  right: 50px;
+  font-weight: bold;
+  color: var(--blue);
+  background-color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.add-form {
+  display: flex;
+  gap: 1rem;
+}
+
+.label-input {
+  display: flex;
+  flex-direction: column;
+}
+
+#add-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 3rem;
+}

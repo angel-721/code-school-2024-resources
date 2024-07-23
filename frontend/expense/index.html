@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue App</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <div id="top-bar">
+        <h1>Expense Tracker</h1>
+        <div id="search-bar">
+          <input type="text" placeholder="Search..." v-model="search" />
+          <p id="clear-search" @click="resetSearch()">X</p>
+        </div>
+      </div>
+
+      <div id="expenses">
+        <div class="row-head">
+          <div>Description</div>
+          <div>
+            Amount
+            <span @click="sortExpenses()" v-if="sortOrder == 'asc'">&and;</span>
+            <span @click="sortExpenses()" v-else>&or;</span>
+          </div>
+          <div>Category</div>
+          <div></div>
+        </div>
+
+        <div v-for="(exp, index) in filterExpenses" class="row-body">
+          <div>{{exp.description}}</div>
+          <div
+            v-bind:style="[exp.amount > 0 ? {color: 'green'} : {color: 'red'}]"
+          >
+            {{exp.amount}}
+          </div>
+          <div>{{exp.category}}</div>
+          <div class="button-container">
+            <button @click="deleteExpense(index)">Delete</button>
+            <button @click="toggleModal(index)">Edit</button>
+          </div>
+        </div>
+
+        <div class="row-footer">
+          <div>TOTAL</div>
+          <div v-bind:class="[{green: balance > 0}, {red: balance <= 0}]">
+            {{balance}}
+          </div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+
+      <div id="add-container">
+        <h2>Add Expense</h2>
+        <form @submit.prevent="addExpense()" class="add-form">
+          <label class="label-input">
+            <span>Description</span>
+            <input
+              type="text"
+              v-model="newExpense.description"
+              class="modal-input"
+            />
+          </label>
+          <label class="label-input">
+            <span>Amount</span>
+            <input
+              type="number"
+              v-model="newExpense.amount"
+              class="modal-input"
+            />
+          </label>
+          <label class="label-input">
+            <span>Category</span>
+            <input
+              type="text"
+              v-model="newExpense.category"
+              class="modal-input"
+            />
+          </label>
+          <button>Add New</button>
+        </form>
+      </div>
+
+      <div class="modal" v-show="modalOpen">
+        <div class="content">
+          <div id="close" @click="toggleModal()">X</div>
+          Description<input
+            type="text"
+            v-model="modal.description"
+            class="modal-input"
+          />
+          Amount<input type="text" v-model="modal.amount" class="modal-input" />
+          Category<input
+            type="text"
+            v-model="modal.category"
+            class="modal-input"
+          />
+          <button v-on:click="updateExpense()">Save</button>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

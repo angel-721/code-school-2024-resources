@@ -1,5 +1,4 @@
 # Backend Outline & Resources
-:%s/^\(.*\.jpg\)$/https:\/\/raw.githubusercontent.com\/yuhonas\/free-exercise-db\/main\/exercises\/\1/g
 
 ## Every web app is a web page but not every web page is a web app
 [Web Applications vs. Static Websites – What’s the Difference?

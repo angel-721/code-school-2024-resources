@@ -31,7 +31,7 @@ Step 1) [Download Node Version Manager](https://nodejs.org/en/download/package-m
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 
 ```
-Step 2) Use NVM to install the LTS version of Node(v20)
+Step 2) Use NVM to install the LTS version of Node(v20) - THIS CHAN BE WHATEVER THE LATEST VERSION OF NODE IS
 ```bash
 # download and install Node.js (you may need to restart the terminal)
 nvm install 20
